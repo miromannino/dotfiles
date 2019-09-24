@@ -9,7 +9,7 @@ source ~/.zshrc
 dotfiles config --local status.showUntrackedFiles no
 ```
 
-So to add new files to the configuration, you can use the `dotfiles` alias in the following way:
+To add new files to the configuration, you can use the `dotfiles` alias in the following way:
 
 ```
 dotfiles add .vimrc
@@ -22,7 +22,6 @@ To apply the configuration to another machine, the following commands can be use
 ```
 echo 'alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles.git/ --work-tree=$HOME"' >> $HOME/.zshrc
 source ~/.zshrc
-echo ".dotfiles.git" >> .gitignore
 git clone --bare git@github.com:miromannino/dotfiles.git $HOME/.dotfiles.git
 dotfiles checkout
 dotfiles config --local status.showUntrackedFiles no
