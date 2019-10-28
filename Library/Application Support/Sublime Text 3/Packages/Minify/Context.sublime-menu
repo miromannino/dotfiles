@@ -1,8 +1,0 @@
-[{
-	"id": "minifymenu",
-	"caption": "Minify",
-	"children": [
-		{ "id": "minifyfile", "caption": "Minify File", "command": "minify" },
-		{ "id": "beautifyfile", "caption": "Beautify File", "command": "beautify" }
-	]
-}]

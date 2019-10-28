@@ -5,21 +5,8 @@
 	],
 	"installed_packages":
 	[
-		"Babel",
-		"ColorPicker",
-		"HTML-CSS-JS Prettify",
-		"HTMLBeautify",
-		"JSON Reindent",
-		"LaTeXTools",
-		"Minify",
 		"Package Control",
-		"Sass",
 		"SideBarEnhancements",
-		"SublimeLinter",
-		"SublimeLinter-jshint",
-		"SublimeLinter-json",
-		"SublimeLinter-lua",
-		"SublimeLinter-xmllint",
-		"Theme - Spacegray"
+		"Theme - Eightlime"
 	]
 }
