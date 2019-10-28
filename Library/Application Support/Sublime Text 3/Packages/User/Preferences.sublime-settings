@@ -5,13 +5,13 @@
 		"screenshot"
 	],
 	"auto_match_enabled": false,
-	"color_scheme": "Packages/Theme - Eightlime/Eightlime Dark.tmTheme",
+	"color_scheme": "Packages/User/SublimeLinter/base16-eighties.dark (SL).tmTheme",
 	"font_size": 14,
 	"ignored_packages":
 	[
 		"Vintage"
 	],
 	"tab_size": 2,
-	"theme": "Eightlime Dark.sublime-theme",
+	"theme": "Spacegray Eighties.sublime-theme",
 	"translate_tabs_to_spaces": true
 }
