@@ -1,4 +1,0 @@
-[
-  {"keys": ["ctrl+alt+m"], "command": "minify"},
-  {"keys": ["ctrl+alt+shift+m"], "command": "beautify"}
-]
