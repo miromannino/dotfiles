@@ -12,3 +12,7 @@ fi
 
 # Customize to your needs...
 alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles.git/ --work-tree=$HOME"
+
+# Python
+alias python=/usr/local/bin/python3
+alias pip=/usr/local/bin/pip3
