@@ -33,10 +33,10 @@ dotfiles config --local status.showUntrackedFiles no
 
 - AltTab (https://github.com/lwouis/alt-tab-macos)
   
-    ```brew cask install alt-tab```
+    ```brew install --cask alt-tab```
 
 - Hammerspoon (https://github.com/Hammerspoon/hammerspoon)
   
-    ```brew cask install hammerspoon```
+    ```brew install --cask hammerspoon```
     
 
