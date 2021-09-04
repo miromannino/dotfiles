@@ -47,6 +47,9 @@ typeset -gU cdpath fpath mailpath path
 path=(
   /usr/local/{bin,sbin}
   /usr/local/monetdb/bin
+  /Users/miro/Library/Android/sdk/platform-tools
+  /usr/local/gcc_arm/bin
+  $HOME/.local/bin
   $path
 )
 
