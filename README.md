@@ -39,4 +39,18 @@ dotfiles config --local status.showUntrackedFiles no
   
     ```brew install --cask hammerspoon```
     
+- Karabiner-Elements (https://karabiner-elements.pqrs.org/)
 
+    ```brew install --cask karabiner-elements```
+
+- Goku (https://github.com/yqrashawn/GokuRakuJoudo)
+
+  ```brew install yqrashawn/goku/goku```
+ 
+- Neovim (https://neovim.io/)
+
+  ```brew install neovim```
+  
+- Neovide (https://github.com/neovide/neovide)
+
+  ```brew install neovide```
