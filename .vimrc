@@ -1,7 +1,34 @@
+"-----------------------------------------
+" GENERIC
+"-----------------------------------------
+set encoding=utf-8
+
+set number
+
+" Incremental search
+set incsearch
+
+" Allow exit from file even if is not saved
+set hidden 
+
+" Enable mouse
+set mouse=a
+
+" Sounds off
+set belloff=all
+set novisualbell
+
+" Time vim waits after you stop typing before triggering plugins
+set updatetime=300
+
+"-----------------------------------------
+" COPY&PASTE
+"-----------------------------------------
 " These are to cancel the default behavior of d, D, c, C
 " to put the text they delete in the default register.
 " Note that this means e.g. "ad won't copy the text into
 " register a anymore.  You have to explicitly yank it.
+"-----------------------------------------
 nnoremap p "+p
 nnoremap P "+P
 vnoremap p "+p
@@ -11,4 +38,41 @@ nnoremap x "+x
 vnoremap y "+y
 nnoremap y "+y
 
-:set number
+"-----------------------------------------
+" Tabs & Indentation 
+"-----------------------------------------
+set tabstop=2 "width of the TAB character set to 2 spaces
+set softtabstop=2 "what happens when TAB or BS keys are pressed
+set expandtab "what happens when TAB is pressed
+set shiftwidth=2 "what happens when >>, << and auto indentation
+
+"affects how TAB key is interpreted. With this ON the TAB
+"key inserts indentation according to shiftwidth if the 
+"cursor is at the beginning of a line, otherwise it will 
+"be using tabstop and softtabstop.
+set smarttab
+
+"Don't remove the selection after indentation
+xnoremap > >gv
+xnoremap < <gv
+
+"Use TAB and SHIFT-TAB to indent quicker than > and <
+xnoremap <tab> >gv
+xnoremap <S-Tab> <gv
+
+set autoindent 
+
+"-----------------------------------------
+" Move through wrapped lines (e.g. in Markdown files)
+"-----------------------------------------
+nnoremap j gj
+nnoremap k gk
+vnoremap j gj
+vnoremap k gk
+nnoremap <Down> gj
+nnoremap <Up> gk
+vnoremap <Down> gj
+vnoremap <Up> gk
+inoremap <Down> <C-o>gj
+inoremap <Up> <C-o>gk
+
