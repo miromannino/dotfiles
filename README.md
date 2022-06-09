@@ -29,21 +29,70 @@ dotfiles config --local status.showUntrackedFiles no
 
 ## Requirements
 
-- Zsh using prezto (https://github.com/sorin-ionescu/prezto)
+### Zsh using prezto 
 
-- AltTab (https://github.com/lwouis/alt-tab-macos)
+https://github.com/sorin-ionescu/prezto
+
+Install:
+
+```
+git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
+```
+
+Create default configuration folder for it
+```
+setopt EXTENDED_GLOB
+for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
+  ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
+done
+```
+### AltTab 
+
+https://github.com/lwouis/alt-tab-macos
   
-    ```brew install --cask alt-tab```
-
-- Hammerspoon (https://github.com/Hammerspoon/hammerspoon)
-  
-    ```brew install --cask hammerspoon```
-    
-- Karabiner-Elements (https://karabiner-elements.pqrs.org/)
-
-    ```brew install --cask karabiner-elements```
+Install
  
-- VIM
+```
+brew install --cask alt-tab
+```
+
+### Hammerspoon 
+
+https://github.com/Hammerspoon/hammerspoon)
+  
+```
+brew install --cask hammerspoon
+```
+    
+### Karabiner-Elements
+
+https://karabiner-elements.pqrs.org/
+
+```
+brew install --cask karabiner-elements
+```
+    
+### iTerm2 
+
+https://iterm2.com/
+
+```
+brew install --cask iterm2
+```
+
+### Powerline fonts
+
+https://github.com/powerline/fonts
+
+ ```
+git clone https://github.com/powerline/fonts.git --depth=1
+cd fonts
+./install.sh
+cd ..
+rm -rf fonts
+ ```
+ 
+ ### VIM
 
   - Neovim (https://neovim.io/)
 
