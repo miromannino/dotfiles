@@ -27,7 +27,7 @@ dotfiles checkout
 dotfiles config --local status.showUntrackedFiles no
 ```
 
-## Applications requirements
+## Requirements
 
 - Zsh using prezto (https://github.com/sorin-ionescu/prezto)
 
@@ -43,6 +43,21 @@ dotfiles config --local status.showUntrackedFiles no
 
     ```brew install --cask karabiner-elements```
  
-- Neovim (https://neovim.io/)
+- VIM
 
-  ```brew install neovim```
+  - Neovim (https://neovim.io/)
+
+    ```brew install neovim```
+    
+  - Vim Plug
+  
+    ```
+    sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+    ```
+       
+     On VIM do `:PlugInstall` or `:PlugUpdate` to install or update them after changing `~/.config/nvim/init.vim`
+     
+     
+  
+  
