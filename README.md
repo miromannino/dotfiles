@@ -39,4 +39,10 @@ dotfiles config --local status.showUntrackedFiles no
   
     ```brew install --cask hammerspoon```
     
+- Karabiner-Elements (https://karabiner-elements.pqrs.org/)
 
+    ```brew install --cask karabiner-elements```
+ 
+- Neovim (https://neovim.io/)
+
+  ```brew install neovim```
