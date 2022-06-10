@@ -21,6 +21,8 @@ set novisualbell
 " Time vim waits after you stop typing before triggering plugins
 set updatetime=300
 
+let mapleader = " " "map leader to space
+
 "-----------------------------------------
 " COPY&PASTE
 "-----------------------------------------
@@ -33,11 +35,12 @@ nnoremap p "+p
 nnoremap P "+P
 vnoremap p "+p
 vnoremap P "+P
-vnoremap x "+x
-nnoremap x "+x
 vnoremap y "+y
 nnoremap y "+y
-
+" x to only work in visual mode to cut text
+nnoremap X "_D
+nnoremap x "_x
+vnoremap x "+x
 "-----------------------------------------
 " Tabs & Indentation 
 "-----------------------------------------
