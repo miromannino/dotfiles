@@ -1,3 +1,4 @@
+
 # dotfiles
 
 This repository has been created with the following commands:
@@ -80,17 +81,16 @@ https://iterm2.com/
 brew install --cask iterm2
 ```
 
-### Powerline fonts
+### Nerd fonts
 
-https://github.com/powerline/fonts
+https://github.com/ryanoasis/nerd-fonts#option-4-homebrew-fonts
 
  ```
-git clone https://github.com/powerline/fonts.git --depth=1
-cd fonts
-./install.sh
-cd ..
-rm -rf fonts
- ```
+brew tap homebrew/cask-fonts
+brew install --cask font-hack-nerd-font
+```
+
+iTerm2 in `Preferences... -> Profiles -> Text -> Font` should be automatically set to use `Hack Nerd Font Mono` through these dotfiles.
  
  ### VIM
 
