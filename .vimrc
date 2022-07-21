@@ -23,13 +23,14 @@ set updatetime=300
 
 let mapleader = " " "map leader to space
 
+
 "-----------------------------------------
 " COPY&PASTE
 "-----------------------------------------
 " These are to cancel the default behavior of d, D, c, C
 " to put the text they delete in the default register.
 " Note that this means e.g. "ad won't copy the text into
-" register a anymore.  You have to explicitly yank it.
+" register a anymore. You have to explicitly yank it.
 "-----------------------------------------
 nnoremap p "+p
 nnoremap P "+P
@@ -37,10 +38,11 @@ vnoremap p "+p
 vnoremap P "+P
 vnoremap y "+y
 nnoremap y "+y
-" x to only work in visual mode to cut text
+" to have x to only work in visual mode to cut text
 nnoremap X "_D
 nnoremap x "_x
 vnoremap x "+x
+
 "-----------------------------------------
 " Tabs & Indentation 
 "-----------------------------------------

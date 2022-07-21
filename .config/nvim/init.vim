@@ -8,29 +8,38 @@ source ~/.vimrc
 " --------------------------- 
 call plug#begin('~/.vim/plugged')
 
-Plug 'neoclide/coc.nvim', {'branch': 'release'} "conquer of completion
-Plug 'ctrlpvim/ctrlp.vim' "fuzzy find files
-Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
+  if !exists('g:vscode')
 
-"nvim-telescope
-Plug 'nvim-lua/plenary.nvim'
-Plug 'nvim-telescope/telescope.nvim'
+    Plug 'neoclide/coc.nvim', {'branch': 'release'} "conquer of completion
+    Plug 'ctrlpvim/ctrlp.vim' "fuzzy find files
 
-" NvimTree
-Plug 'kyazdani42/nvim-web-devicons' " for file icons
-Plug 'kyazdani42/nvim-tree.lua'
+    "nvim-telescope
+    Plug 'nvim-lua/plenary.nvim'
+    Plug 'nvim-telescope/telescope.nvim'
 
-" Theme
-Plug 'projekt0n/github-nvim-theme'
+    " NvimTree
+    Plug 'kyazdani42/nvim-web-devicons' " for file icons
+    Plug 'kyazdani42/nvim-tree.lua'
 
-" Statusline
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+    " Theme
+    Plug 'projekt0n/github-nvim-theme'
 
-" Scrollbars
-Plug 'dstein64/nvim-scrollview', { 'branch': 'main' }
-let g:airline_theme='luna'
-let g:airline_powerline_fonts = 1
+    " Statusline
+    Plug 'vim-airline/vim-airline'
+    Plug 'vim-airline/vim-airline-themes'
+
+    " Scrollbars
+    Plug 'dstein64/nvim-scrollview', { 'branch': 'main' }
+    let g:airline_theme='luna'
+    let g:airline_powerline_fonts = 1
+
+  else 
+
+    Plug 'chrisbra/vim-commentary'
+
+    Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
+
+  endif
 
 call plug#end()
 
