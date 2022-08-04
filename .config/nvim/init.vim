@@ -22,7 +22,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'kyazdani42/nvim-tree.lua'
 
     " Theme
-    Plug 'projekt0n/github-nvim-theme'
+    Plug 'navarasu/onedark.nvim'
 
     " Statusline
     Plug 'vim-airline/vim-airline'
@@ -30,12 +30,8 @@ call plug#begin('~/.vim/plugged')
 
     " Scrollbars
     Plug 'dstein64/nvim-scrollview', { 'branch': 'main' }
-    let g:airline_theme='luna'
-    let g:airline_powerline_fonts = 1
 
   else 
-
-    Plug 'chrisbra/vim-commentary'
 
     Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 
@@ -43,4 +39,3 @@ call plug#begin('~/.vim/plugged')
 
 call plug#end()
 
-colorscheme github_dark_default
