@@ -8,34 +8,33 @@ source ~/.vimrc
 " --------------------------- 
 call plug#begin('~/.vim/plugged')
 
-  if !exists('g:vscode')
+if !exists('g:vscode')
 
-    Plug 'neoclide/coc.nvim', {'branch': 'release'} "conquer of completion
-    Plug 'ctrlpvim/ctrlp.vim' "fuzzy find files
+  Plug 'ctrlpvim/ctrlp.vim' "fuzzy find files
 
-    "nvim-telescope
-    Plug 'nvim-lua/plenary.nvim'
-    Plug 'nvim-telescope/telescope.nvim'
+  "nvim-telescope
+  Plug 'nvim-lua/plenary.nvim'
+  Plug 'nvim-telescope/telescope.nvim'
 
-    " NvimTree
-    Plug 'kyazdani42/nvim-web-devicons' " for file icons
-    Plug 'kyazdani42/nvim-tree.lua'
+  " NvimTree
+  Plug 'kyazdani42/nvim-web-devicons' " for file icons
+  Plug 'kyazdani42/nvim-tree.lua'
 
-    " Theme
-    Plug 'navarasu/onedark.nvim'
+  " Theme
+  Plug 'navarasu/onedark.nvim'
 
-    " Statusline
-    Plug 'vim-airline/vim-airline'
-    Plug 'vim-airline/vim-airline-themes'
+  " Statusline
+  Plug 'vim-airline/vim-airline'
+  Plug 'vim-airline/vim-airline-themes'
 
-    " Scrollbars
-    Plug 'dstein64/nvim-scrollview', { 'branch': 'main' }
+  " Scrollbars
+  Plug 'dstein64/nvim-scrollview', { 'branch': 'main' }
 
-  else 
+else 
 
-    Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
+  Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 
-  endif
+endif
 
 call plug#end()
 
