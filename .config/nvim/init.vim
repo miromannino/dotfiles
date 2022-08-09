@@ -3,6 +3,11 @@ set runtimepath^=~/.vim runtimepath+=~/.vim/after
 let &packpath=&runtimepath
 source ~/.vimrc
 
+
+" Set terminal title as the opened path
+set title
+set titlestring=%t
+
 " --------------------------- 
 "  Plugins
 " --------------------------- 

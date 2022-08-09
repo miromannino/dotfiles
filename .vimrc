@@ -5,9 +5,6 @@ set encoding=utf-8
 
 set number
 
-" Incremental search
-set incsearch
-
 " Allow exit from file even if is not saved
 set hidden 
 
@@ -67,6 +64,17 @@ xnoremap <S-Tab> <gv
 
 set autoindent 
 
+"Use double equal to format the whole document, and to go back around the the last position
+"Be aware that last position might be different after formatting, so it doesn't work well sometimes.
+"In VSCode better to map directly == in this way:
+" "vim.normalModeKeyBindingsNonRecursive": [
+"   {
+"     "before": ["=", "="],
+"     "commands": ["editor.action.formatDocument"]
+"   }
+" ],
+nnoremap == gg=G<C-o>zz
+
 "-----------------------------------------
 " Move through wrapped lines (e.g. in Markdown files)
 "-----------------------------------------
@@ -87,26 +95,54 @@ inoremap <Up> <C-o>gk
 " In VSCode to keep this behaviour add in keybindings.json, otherwise this wouldn't always work
 " if the cursor goes where vim is not active (e.g. from file explorer C-l to go back to editor)
 "
-  {
-    "key": "ctrl+h",
-    "command": "workbench.action.navigateLeft"
-  },
-  {
-    "key": "ctrl+l",
-    "command": "workbench.action.navigateRight"
-  },
-  {
-    "key": "ctrl+k",
-    "command": "workbench.action.navigateUp"
-  },
-  {
-    "key": "ctrl+j",
-    "command": "workbench.action.navigateDown"
-  }
+" {
+"   "key": "ctrl+h",
+"   "command": "workbench.action.navigateLeft"
+" },
+" {
+"   "key": "ctrl+l",
+"   "command": "workbench.action.navigateRight"
+" },
+" {
+"   "key": "ctrl+k",
+"   "command": "workbench.action.navigateUp"
+" },
+" {
+"   "key": "ctrl+j",
+"   "command": "workbench.action.navigateDown"
+" }
 "
 "-----------------------------------------
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
+
+
+"-----------------------------------------
+" Speed up scrolling  
+"-----------------------------------------
+nnoremap <C-e> 2<C-e>
+nnoremap <C-y> 2<C-y>
+
+
+"-----------------------------------------
+" Search & Replace 
+"-----------------------------------------
+
+" Incremental search
+set incsearch
+set showmatch
+set hlsearch
+
+" Searching for an all-lowercase string your search will be case-insensitive, 
+" but if one or more characters is uppercase the search will be case-sensitive
+set ignorecase
+set smartcase
+
+" Applies substitutions globally on lines, not just the first occurrence
+set gdefault
+
+" Clear highlighted found words
+nnoremap <silent> <leader>/ :nohlsearch<CR>
 
