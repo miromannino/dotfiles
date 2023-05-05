@@ -66,7 +66,7 @@ set autoindent
 
 "Use double equal to format the whole document, and to go back around the the last position
 "Be aware that last position might be different after formatting, so it doesn't work well sometimes.
-"In VSCode better to map directly == in this way:
+"In VSCode better to map directly == in this way
 " "vim.normalModeKeyBindingsNonRecursive": [
 "   {
 "     "before": ["=", "="],
@@ -74,6 +74,14 @@ set autoindent
 "   }
 " ],
 nnoremap == gg=G<C-o>zz
+
+" Instead, to replicate the = formatting the current selection in VSCode
+" "vim.normalModeKeyBindingsNonRecursive": [
+"   {
+"     "before": ["="],
+"     "commands": ["editor.action.formatSelection"]
+"   }
+" ],
 
 "-----------------------------------------
 " Move through wrapped lines (e.g. in Markdown files)
