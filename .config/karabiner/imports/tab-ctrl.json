@@ -1,0 +1,21 @@
+{
+  "description": "tab to left_control if pressed with other keys",
+  "manipulators": [
+    {
+      "from": {
+        "key_code": "tab"
+      },
+      "to": [
+        {
+          "key_code": "left_control"
+        }
+      ],
+      "to_if_alone": [
+        {
+          "key_code": "tab"
+        }
+      ],
+      "type": "basic"
+    }
+  ]
+}

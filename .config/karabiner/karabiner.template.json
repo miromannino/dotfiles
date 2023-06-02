@@ -1,0 +1,78 @@
+{
+  "global": {
+    "ask_for_confirmation_before_quitting": true,
+    "check_for_updates_on_startup": true,
+    "show_in_menu_bar": false,
+    "show_profile_name_in_menu_bar": false,
+    "unsafe_ui": false
+  },
+  "profiles": [
+    {
+      "complex_modifications": {
+        "parameters": {
+          "basic.simultaneous_threshold_milliseconds": 50,
+          "basic.to_delayed_action_delay_milliseconds": 500,
+          "basic.to_if_alone_timeout_milliseconds": 1000,
+          "basic.to_if_held_down_threshold_milliseconds": 500,
+          "mouse_motion_to_scroll.speed": 100
+        },
+        "rules": [
+          {
+            "$set-hyper-key": {
+              "key": "right_command",
+              "modifiers": [ "left_shift", "left_command", "left_control", "left_option" ]
+            }
+          },
+          {
+            "$set-meh-key": {
+              "modifiers": [ "left_control", "left_option", "left_command" ] 
+            }
+          },
+          { "$import": "vim-arrows" },
+          { "$import": "tab-ctrl" },
+          {
+            "$hyper-sub-layers": {
+              "o": {
+                "description": "Open applications",
+                "e": { "$app": "Microsoft Edge" },
+                "v": { "$app": "Visual Studio Code" },
+                "s": { "$app": "Slack" },
+                "t": { "$app": "iTerm" },
+                "f": { "$app": "Finder" }
+              },
+              "m": {
+                "description": "Media shortcuts",
+                "u": { "$key": "volume_increment" },
+                "d": { "$key": "volume_decrement" },
+                "p": { "$key": "play_pause" },
+                "n": { "$key": "next_track" },
+                "b": { "$key": "prev_track" }
+              },
+              "u": {
+                "description": "URLs opening shortcuts",
+                "g": { "$url": "https://www.gmail.com" },
+                "c": { "$url": "https://chat.openai.com" }
+              },
+              "s": {
+                "description": "System shortcuts",
+                "u": { "$key": "display_brightness_increment" },
+                "d": { "$key": "display_brightness_decrement" },
+                "l": { "$key": "lock_screen" }
+              },
+              "w": {
+                "description": "Window management shortcuts",
+                "h": { "$key": "$meh_left_arrow" },
+                "j": { "$key": "$meh_down_arrow" },
+                "k": { "$key": "$meh_up_arrow" },
+                "l": { "$key": "$meh_right_arrow" }
+              }
+            }
+          }
+        ]
+      },
+      "name": "Default profile",
+      "parameters": { "delay_milliseconds_before_open_device": 1000 },
+      "selected": true
+    }
+  ]
+}
