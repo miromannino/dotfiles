@@ -97,8 +97,26 @@ brew install --cask font-hack-nerd-font
 ```
 
 iTerm2 in `Preferences... -> Profiles -> Text -> Font` should be automatically set to use `Hack Nerd Font Mono` through these dotfiles.
- 
- ### VIM
+
+### Tmux
+
+Install Tmux Plugin Manager
+
+```
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+```
+
+These dotfiles in this repository will have a configuration file for tmux in .config/tmux/tmux.config
+
+Run in `tmux` the following
+
+```
+tmux source-file .config/tmux/tmux.conf
+```
+
+And also in tmux, press ctrl+b + I to install the plugins.
+
+### VIM
 
   - Neovim (https://neovim.io/)
 
