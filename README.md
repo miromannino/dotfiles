@@ -81,6 +81,12 @@ https://iterm2.com/
 brew install --cask iterm2
 ```
 
+Set One Dark Pro theme in iTerm from 
+
+```
+https://github.com/chinhsuanwu/one-dark-pro-iterm
+```
+
 ### Nerd fonts
 
 https://github.com/ryanoasis/nerd-fonts#option-4-homebrew-fonts
@@ -91,22 +97,30 @@ brew install --cask font-hack-nerd-font
 ```
 
 iTerm2 in `Preferences... -> Profiles -> Text -> Font` should be automatically set to use `Hack Nerd Font Mono` through these dotfiles.
- 
- ### VIM
+
+### Tmux
+
+Install Tmux Plugin Manager
+
+```
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+```
+
+These dotfiles in this repository will have a configuration file for tmux in .config/tmux/tmux.config
+
+Run in `tmux` the following
+
+```
+tmux source-file .config/tmux/tmux.conf
+```
+
+And also in tmux, press ctrl+b + I to install the plugins.
+
+### VIM
 
   - Neovim (https://neovim.io/)
 
     ```brew install neovim```
-    
-  - Vim Plug
-  
-    ```
-    sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
-       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
-    ```
-       
-     On VIM do `:PlugInstall` or `:PlugUpdate` to install or update them after changing `~/.config/nvim/init.vim`
-     
      
   
   
