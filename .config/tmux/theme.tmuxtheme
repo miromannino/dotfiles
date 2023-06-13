@@ -1,0 +1,47 @@
+#!/bin/bash
+
+# Colors from onedark theme
+color_black="#282C34"
+color_red="#E06C75"
+color_green="#98C379"
+color_yellow="#E5C07B"
+color_blue="#6LAFEF"
+color_magenta="#C678DD"
+color_tail="#56B6C2"
+color_white="#ABB2BF"
+color_grey="#3E4452"
+
+set "status" "on"
+set "status-justify" "left"
+set "status-left-length" "100"
+set "status-right-length" "100"
+setw -g window-status-style fg=$color_black,bg=$color_black
+setw -g window-status-current-style fg=$color_black,bg=$color_grey
+setw -g window-status-activity-style bg=$color_black,fg=$color_black
+setw -g window-status-separator ""
+set-option -g status-style none
+set-option -g status-left-style none
+set-option -g status-style bg=$color_black,fg=$color_white
+
+set-option -g window-style fg=$color_grey
+set-option -g window-active-style fg=$color_white
+
+set-option -g message-style fg=$color_white,bg=$color_black
+set-option -g message-command-style fg=$color_white,bg=$color_black
+
+set-option -g pane-border-style fg=$color_white,bg=$color_black
+set-option -g pane-active-border-style fg=$color_green,bg=$color_black
+
+set-option -g display-panes-active-colour $color_yellow
+set-option -g display-panes-colour $color_blue
+
+set-option -g @prefix_highlight_fg $color_black
+set-option -g @prefix_highlight_bg $color_green
+set-option -g @prefix_highlight_copy_mode_attr fg=$color_black,bg=$color_green
+set-option -g @prefix_highlight_output_prefix "  "
+
+set-option -g status-right "#[fg=$color_green,bg=$color_black,nobold,nounderscore,noitalics]#[fg=$color_black,bg=$color_green,bold] #h #[fg=$color_yellow,bg=$color_green]#[fg=$color_black,bg=$color_yellow]"
+set-option -g status-left "#[fg=$color_black,bg=$color_green,bold]#[fg=$color_black,bg=$color_green,bold] #S #{prefix_highlight}#[fg=$color_green,bg=$color_black,nobold,nounderscore,noitalics]"
+
+set-option -g window-status-format "#[fg=$color_black,bg=$color_black,nobold,nounderscore,noitalics]#[fg=$color_white,bg=$color_black] #I  #W #[fg=$color_black,bg=$color_black,nobold,nounderscore,noitalics]"
+set-option -g window-status-current-format "#[fg=$color_black,bg=$color_grey,nobold,nounderscore,noitalics]#[fg=$color_white,bg=$color_grey,nobold] #I  #W #[fg=$color_grey,bg=$color_black,nobold,nounderscore,noitalics]"
