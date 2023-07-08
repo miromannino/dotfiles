@@ -19,7 +19,7 @@
         "rules": [
           {
             "$set-hyper-key": {
-              "key": "right_command",
+              "key": "space",
               "modifiers": [ "left_shift", "left_command", "left_control", "left_option" ]
             }
           },
