@@ -19,7 +19,7 @@
         "rules": [
           {
             "$set-hyper-key": {
-              "key": "space",
+              "key": "right_alt",
               "modifiers": [ "left_shift", "left_command", "left_control", "left_option" ]
             }
           },
