@@ -199,17 +199,12 @@
                             {
                                 "conditions": [
                                     {
-                                        "name": "hyper_sublayer_description",
+                                        "name": "hyper_sublayer_m",
                                         "type": "variable_if",
                                         "value": 0
                                     },
                                     {
-                                        "name": "hyper_sublayer_e",
-                                        "type": "variable_if",
-                                        "value": 0
-                                    },
-                                    {
-                                        "name": "hyper_sublayer_v",
+                                        "name": "hyper_sublayer_u",
                                         "type": "variable_if",
                                         "value": 0
                                     },
@@ -219,12 +214,7 @@
                                         "value": 0
                                     },
                                     {
-                                        "name": "hyper_sublayer_t",
-                                        "type": "variable_if",
-                                        "value": 0
-                                    },
-                                    {
-                                        "name": "hyper_sublayer_f",
+                                        "name": "hyper_sublayer_w",
                                         "type": "variable_if",
                                         "value": 0
                                     }
@@ -387,7 +377,7 @@
                             {
                                 "conditions": [
                                     {
-                                        "name": "hyper_sublayer_description",
+                                        "name": "hyper_sublayer_o",
                                         "type": "variable_if",
                                         "value": 0
                                     },
@@ -397,22 +387,12 @@
                                         "value": 0
                                     },
                                     {
-                                        "name": "hyper_sublayer_d",
+                                        "name": "hyper_sublayer_s",
                                         "type": "variable_if",
                                         "value": 0
                                     },
                                     {
-                                        "name": "hyper_sublayer_p",
-                                        "type": "variable_if",
-                                        "value": 0
-                                    },
-                                    {
-                                        "name": "hyper_sublayer_n",
-                                        "type": "variable_if",
-                                        "value": 0
-                                    },
-                                    {
-                                        "name": "hyper_sublayer_b",
+                                        "name": "hyper_sublayer_w",
                                         "type": "variable_if",
                                         "value": 0
                                     }
@@ -570,17 +550,22 @@
                             {
                                 "conditions": [
                                     {
-                                        "name": "hyper_sublayer_description",
+                                        "name": "hyper_sublayer_o",
                                         "type": "variable_if",
                                         "value": 0
                                     },
                                     {
-                                        "name": "hyper_sublayer_g",
+                                        "name": "hyper_sublayer_m",
                                         "type": "variable_if",
                                         "value": 0
                                     },
                                     {
-                                        "name": "hyper_sublayer_c",
+                                        "name": "hyper_sublayer_s",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_w",
                                         "type": "variable_if",
                                         "value": 0
                                     }
@@ -671,7 +656,12 @@
                             {
                                 "conditions": [
                                     {
-                                        "name": "hyper_sublayer_description",
+                                        "name": "hyper_sublayer_o",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_m",
                                         "type": "variable_if",
                                         "value": 0
                                     },
@@ -681,12 +671,7 @@
                                         "value": 0
                                     },
                                     {
-                                        "name": "hyper_sublayer_d",
-                                        "type": "variable_if",
-                                        "value": 0
-                                    },
-                                    {
-                                        "name": "hyper_sublayer_l",
+                                        "name": "hyper_sublayer_w",
                                         "type": "variable_if",
                                         "value": 0
                                     }
@@ -798,27 +783,22 @@
                             {
                                 "conditions": [
                                     {
-                                        "name": "hyper_sublayer_description",
+                                        "name": "hyper_sublayer_o",
                                         "type": "variable_if",
                                         "value": 0
                                     },
                                     {
-                                        "name": "hyper_sublayer_h",
+                                        "name": "hyper_sublayer_m",
                                         "type": "variable_if",
                                         "value": 0
                                     },
                                     {
-                                        "name": "hyper_sublayer_j",
+                                        "name": "hyper_sublayer_u",
                                         "type": "variable_if",
                                         "value": 0
                                     },
                                     {
-                                        "name": "hyper_sublayer_k",
-                                        "type": "variable_if",
-                                        "value": 0
-                                    },
-                                    {
-                                        "name": "hyper_sublayer_l",
+                                        "name": "hyper_sublayer_s",
                                         "type": "variable_if",
                                         "value": 0
                                     }
@@ -1003,9 +983,9 @@
                     "fn_function_keys": [],
                     "identifiers": {
                         "is_keyboard": true,
-                        "is_pointing_device": true,
-                        "product_id": 624,
-                        "vendor_id": 13364
+                        "is_pointing_device": false,
+                        "product_id": 1957,
+                        "vendor_id": 1118
                     },
                     "ignore": false,
                     "manipulate_caps_lock_led": true,
@@ -1016,13 +996,13 @@
                     "disable_built_in_keyboard_if_exists": false,
                     "fn_function_keys": [],
                     "identifiers": {
-                        "is_keyboard": true,
-                        "is_pointing_device": false,
-                        "product_id": 624,
-                        "vendor_id": 13364
+                        "is_keyboard": false,
+                        "is_pointing_device": true,
+                        "product_id": 1957,
+                        "vendor_id": 1118
                     },
-                    "ignore": false,
-                    "manipulate_caps_lock_led": true,
+                    "ignore": true,
+                    "manipulate_caps_lock_led": false,
                     "simple_modifications": [],
                     "treat_as_built_in_keyboard": false
                 },
@@ -1045,54 +1025,12 @@
                     "fn_function_keys": [],
                     "identifiers": {
                         "is_keyboard": true,
-                        "is_pointing_device": false,
-                        "product_id": 50475,
-                        "vendor_id": 1133
+                        "is_pointing_device": true,
+                        "product_id": 624,
+                        "vendor_id": 13364
                     },
                     "ignore": false,
                     "manipulate_caps_lock_led": true,
-                    "simple_modifications": [],
-                    "treat_as_built_in_keyboard": false
-                },
-                {
-                    "disable_built_in_keyboard_if_exists": false,
-                    "fn_function_keys": [],
-                    "identifiers": {
-                        "is_keyboard": false,
-                        "is_pointing_device": true,
-                        "product_id": 50475,
-                        "vendor_id": 1133
-                    },
-                    "ignore": true,
-                    "manipulate_caps_lock_led": false,
-                    "simple_modifications": [],
-                    "treat_as_built_in_keyboard": false
-                },
-                {
-                    "disable_built_in_keyboard_if_exists": false,
-                    "fn_function_keys": [],
-                    "identifiers": {
-                        "is_keyboard": true,
-                        "is_pointing_device": false,
-                        "product_id": 1957,
-                        "vendor_id": 1118
-                    },
-                    "ignore": false,
-                    "manipulate_caps_lock_led": true,
-                    "simple_modifications": [],
-                    "treat_as_built_in_keyboard": false
-                },
-                {
-                    "disable_built_in_keyboard_if_exists": false,
-                    "fn_function_keys": [],
-                    "identifiers": {
-                        "is_keyboard": false,
-                        "is_pointing_device": true,
-                        "product_id": 1957,
-                        "vendor_id": 1118
-                    },
-                    "ignore": true,
-                    "manipulate_caps_lock_led": false,
                     "simple_modifications": [],
                     "treat_as_built_in_keyboard": false
                 }
