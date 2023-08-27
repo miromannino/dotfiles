@@ -30,23 +30,26 @@ dotfiles config --local status.showUntrackedFiles no
 
 ## Requirements
 
-### Zsh using prezto 
+### Zsh using Oh My Zsh and Powerlevel10k
 
-https://github.com/sorin-ionescu/prezto
+Install Oh My Zsh
 
-Install:
+  sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
-```
-git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
-```
+Install Powerlevel10k
 
-Create default configuration folder for it
-```
-setopt EXTENDED_GLOB
-for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
-  ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
-done
-```
+  git clone https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
+
+Installing Plugins (full list available at: https://github.com/ohmyzsh/ohmyzsh/wiki/Plugins)
+
+  git clone https://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
+  git clone https://github.com/zsh-users/zsh-history-substring-search $ZSH_CUSTOM/plugins/zsh-history-substring-search
+  git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+
+Take changes into account
+
+  source ~/.zshrc
+
 ### AltTab 
 
 https://github.com/lwouis/alt-tab-macos
@@ -87,17 +90,6 @@ Set One Dark Pro theme in iTerm from
 https://github.com/chinhsuanwu/one-dark-pro-iterm
 ```
 
-### Nerd fonts
-
-https://github.com/ryanoasis/nerd-fonts#option-4-homebrew-fonts
-
- ```
-brew tap homebrew/cask-fonts
-brew install --cask font-hack-nerd-font
-```
-
-iTerm2 in `Preferences... -> Profiles -> Text -> Font` should be automatically set to use `Hack Nerd Font Mono` through these dotfiles.
-
 ### Tmux
 
 Install Tmux Plugin Manager
@@ -115,6 +107,17 @@ tmux source-file .config/tmux/tmux.conf
 ```
 
 And also in tmux, press ctrl+b + I to install the plugins.
+
+### Nerd fonts
+
+https://github.com/ryanoasis/nerd-fonts#option-4-homebrew-fonts
+
+ ```
+brew tap homebrew/cask-fonts
+brew install --cask font-hack-nerd-font
+```
+
+iTerm2 in `Preferences... -> Profiles -> Text -> Font` should be automatically set to use `Hack Nerd Font Mono` through these dotfiles.
 
 ### VIM
 
