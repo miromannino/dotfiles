@@ -16,10 +16,6 @@ export ZSH="$HOME/.oh-my-zsh"
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="powerlevel10k/powerlevel10k"
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(history)
-POWERLEVEL9K_SHORTEN_DIR_LENGTH=1
-ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor root line)
-ZSH_HIGHLIGHT_PATTERNS=('rm -rf *' 'fg=white,bold,bg=red')
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -74,7 +70,6 @@ plugins=(
   brew
   git
   yarn
-  zsh-autosuggestions
   history-substring-search
   zsh-syntax-highlighting
   macos
