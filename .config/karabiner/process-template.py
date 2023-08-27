@@ -1,105 +1,113 @@
-## Copyrght (c) 2023, Miro Mannino
-## All rights reserved.
+# Copyrght (c) 2023, Miro Mannino
+# All rights reserved.
 
 import json
 import sys
 
 MAIN_TEMPLATE_PATH = 'karabiner.template.json'
 KARABINER_JSON_PATH = 'karabiner.json'
-HYPER_KEY = None 
-MEH_KEY = None 
+HYPER_KEY = None
+MEH_KEY = None
+
 
 def load_json_file(path):
   with open(path, 'r') as file:
     return json.load(file)
 
+
 def save_json_file(path, obj):
   with open(path, 'w') as file:
     json.dump(obj, file, indent=2)
 
+
 def open_rule(path):
   return {
-    'to': [
-      {
-        'shell_command': f'open {path}',
-      }
-    ],
-    'description': f'Open {path}'
+      'to': [
+          {
+              'shell_command': f'open {path}',
+          }
+      ],
+      'description': f'Open {path}'
   }
+
 
 def app_rule(app_name):
   return open_rule("-a '" + app_name + ".app'")
 
-def process_hyper_sub_layer(sublayer_key, obj):
+
+def process_hyper_sub_layer(sublayer_key, obj, other_sublayers_keys):
   global HYPER_KEY
 
-  res = [ 
-    {
-      'description': f'Toggle Hyper sublayer {sublayer_key}',
-      'type': 'basic',
-      'from': {
-        'key_code': sublayer_key,
-        'modifiers': {
-          'mandatory': HYPER_KEY 
-        }
-      },
-      'to_after_key_up': [
-        {
-          'set_variable': {
-            'name': f'hyper_sublayer_{sublayer_key}',
-            'value': 0
-          }
-        }
-      ],
-      'to': [
-        {
-          'set_variable': {
-            'name': f'hyper_sublayer_{sublayer_key}',
-            'value': 1
-          }
-        }
-      ],
-      'conditions': [
-        { 'type': 'variable_if', 'name': f'hyper_sublayer_{secondary_key}', 'value': 0 } 
-        for secondary_key in obj.keys() if secondary_key != sublayer_key
-      ]
-    }
+  res = [
+      {
+          'description': f'Toggle Hyper sublayer {sublayer_key}',
+          'type': 'basic',
+          'from': {
+              'key_code': sublayer_key,
+              'modifiers': {
+                  'mandatory': HYPER_KEY
+              }
+          },
+          'to_after_key_up': [
+              {
+                  'set_variable': {
+                      'name': f'hyper_sublayer_{sublayer_key}',
+                      'value': 0
+                  }
+              }
+          ],
+          'to': [
+              {
+                  'set_variable': {
+                      'name': f'hyper_sublayer_{sublayer_key}',
+                      'value': 1
+                  }
+              }
+          ],
+          'conditions': [
+              {'type': 'variable_if', 'name': f'hyper_sublayer_{secondary_key}', 'value': 0}
+              for secondary_key in other_sublayers_keys if secondary_key != sublayer_key
+          ]
+      }
   ]
   for secondary_key in obj.keys():
     if secondary_key == 'description':
       continue
     res.append({
-      **process_json_object(obj[secondary_key]),
-      'type': 'basic',
-      'from': {
-        'key_code': secondary_key,
-        'modifiers': {
-          'mandatory': ['any'],
+        **process_json_object(obj[secondary_key]),
+        'type': 'basic',
+        'from': {
+            'key_code': secondary_key,
+            'modifiers': {
+                'mandatory': ['any'],
+            },
         },
-      },
-      'conditions': [
-        {        
-          # Only trigger if the sublayer key is pressed 
-          'type': 'variable_if',
-          'name': f'hyper_sublayer_{sublayer_key}',
-          'value': 1,
-        },
-      ],
+        'conditions': [
+            {
+                # Only trigger if the sublayer key is pressed
+                'type': 'variable_if',
+                'name': f'hyper_sublayer_{sublayer_key}',
+                'value': 1,
+            },
+        ],
     })
 
-  return res  
+  return res
+
 
 def process_hyper_sub_layers(obj):
   res = []
   for sublayer_key in obj.keys():
     if sublayer_key == 'description':
       continue
+    other_sublayers_keys = filter(lambda k: k != sublayer_key, obj.keys())
     sub_layer_obj = {
-      'description': f'Sublayer {sublayer_key}',
-      'manipulators': process_hyper_sub_layer(sublayer_key, obj[sublayer_key]),
+        'description': f'Sublayer {sublayer_key}',
+        'manipulators': process_hyper_sub_layer(sublayer_key, obj[sublayer_key], other_sublayers_keys),
     }
     res.append(sub_layer_obj)
   return res
+
 
 def process_set_hyper_key(obj):
   global HYPER_KEY
@@ -109,25 +117,26 @@ def process_set_hyper_key(obj):
     return None
   hyper_key = obj['key']
   return {
-    'description': f'Change {hyper_key} to hyper key',
-    'manipulators': [
-      {
-        'type': 'basic',
-        'from': {
-          'key_code': hyper_key,
-          'modifiers': {
-            'optional': ['any']
-          }
-        },
-        'to': [
+      'description': f'Change {hyper_key} to hyper key',
+      'manipulators': [
           {
-            'key_code': modifiers[0],
-            'modifiers': modifiers[1:] 
+              'type': 'basic',
+              'from': {
+                  'key_code': hyper_key,
+                  'modifiers': {
+                      'optional': ['any']
+                  }
+              },
+              'to': [
+                  {
+                      'key_code': modifiers[0],
+                      'modifiers': modifiers[1:]
+                  }
+              ]
           }
-        ]
-      }
-    ]
+      ]
   }
+
 
 def process_set_meh_key(obj):
   global MEH_KEY
@@ -138,56 +147,58 @@ def process_set_meh_key(obj):
 
   meh_key = obj['key']
   return {
-    'description': f'Change {meh_key} to meh key',
-    'manipulators': [
-      {
-        'type': 'basic',
-        'from': {
-          'key_code': meh_key,
-          'modifiers': {
-            'optional': ['any']
-          }
-        },
-        'to': [
+      'description': f'Change {meh_key} to meh key',
+      'manipulators': [
           {
-            'key_code': modifiers[0],
-            'modifiers': modifiers[1:] 
+              'type': 'basic',
+              'from': {
+                  'key_code': meh_key,
+                  'modifiers': {
+                      'optional': ['any']
+                  }
+              },
+              'to': [
+                  {
+                      'key_code': modifiers[0],
+                      'modifiers': modifiers[1:]
+                  }
+              ]
           }
-        ]
-      }
-    ]
+      ]
   }
+
 
 def process_key(key_code):
   if key_code.startswith('$meh_'):
     return {
-      'to': [ { 
-        'key_code': key_code.replace('$meh_', ''),
-        'modifiers': MEH_KEY
-      } ],
-      'type': 'basic'
+        'to': [{
+            'key_code': key_code.replace('$meh_', ''),
+            'modifiers': MEH_KEY
+        }],
+        'type': 'basic'
     }
   if key_code.startswith('$hyper_'):
     return {
-      'to': [ { 
-        'key_code': key_code.replace('$hyper_', ''),
-        'modifiers': HYPER_KEY
-      } ],
-      'type': 'basic'
+        'to': [{
+            'key_code': key_code.replace('$hyper_', ''),
+            'modifiers': HYPER_KEY
+        }],
+        'type': 'basic'
     }
   return {
-    'to': [ { 'key_code': key_code } ],
-    'type': 'basic'
+      'to': [{'key_code': key_code}],
+      'type': 'basic'
   }
 
 
 def process_url(url):
   return {
-    'to': [
-      { 'shell_command': f'osascript -e \'open location "{url}"\'' }
-    ],
-    'description': f'Open {url}'
+      'to': [
+          {'shell_command': f'osascript -e \'open location "{url}"\''}
+      ],
+      'description': f'Open {url}'
   }
+
 
 def process_json_object(obj):
   if isinstance(obj, dict):
@@ -220,18 +231,31 @@ def process_json_object(obj):
     else:
       return {k: process_json_object(v) for k, v in obj.items()}
   elif isinstance(obj, list):
-    return [process_json_object(elem) for elem in obj ]
+    return [process_json_object(elem) for elem in obj]
   else:
     return obj
 
+
 if __name__ == '__main__':
   args = sys.argv[1:]
+
   if len(args) != 2:
     print('Usage: process-template.py <input-file> <output-file>')
-    exit(1)
+    # Asking if to continue with standard arguments or to exit
+    if input('Continue with default arguments? ' +
+             '(karabiner.template.json will be parsed to karabiner.json) ' +
+             '[y/N]: '
+             ).lower() == 'y':
+      input_file = 'karabiner.template.json'
+      outuput_file = 'karabiner.json'
+    else:
+      exit(1)
+  else:
+    input_file = args[0]
+    outuput_file = args[1]
 
-  template = load_json_file(args[0])
+  print("Processing...")
+  template = load_json_file(input_file)
   processed_template = process_json_object(template)
-  save_json_file(args[1], processed_template)
-
-
+  save_json_file(outuput_file, processed_template)
+  print("Done")
