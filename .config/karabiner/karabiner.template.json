@@ -30,6 +30,21 @@
           },
           { "$import": "vim-arrows" },
           { "$import": "tab-ctrl" },
+          { "$disable-keys-combinations": [
+              {"key_code": "open_bracket", "modifiers": ["right_shift"] },
+              {"key_code": "close_bracket", "modifiers": ["right_shift"] },
+              {"key_code": "9", "modifiers": ["right_shift"] },
+              {"key_code": "0", "modifiers": ["right_shift"] },
+              {"key_code": "equal_sign", "modifiers": ["right_shift"] },
+              {"key_code": "hyphen", "modifiers": ["right_shift"] },
+              {"key_code": "8", "modifiers": ["right_shift"] },
+              {"key_code": "6", "modifiers": ["right_shift"] },
+              {"key_code": "5", "modifiers": ["right_shift"] },
+              {"key_code": "backslash", "modifiers": ["right_shift"] },
+              {"key_code": "quote", "modifiers": ["right_shift"] },
+              {"key_code": "slash", "modifiers": ["right_shift"] }
+            ]
+          },
           {
             "$hyper-sub-layers": {
               "o": {

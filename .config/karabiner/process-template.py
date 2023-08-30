@@ -199,6 +199,24 @@ def process_url(url):
       'description': f'Open {url}'
   }
 
+def process_disable_keys_combination(key_code, modifiers):
+  return {
+    'description': f'Disable {"+".join(modifiers)} + {key_code}',
+    'manipulators': [
+      {
+        'type': 'basic',
+        'from': {
+          'key_code': key_code,
+          'modifiers': {
+            'mandatory': modifiers 
+          }
+        },
+        'to': [ 
+          { 'key_code': 'vk_none' } 
+        ]
+      }
+    ]
+  }
 
 def process_json_object(obj):
   if isinstance(obj, dict):
@@ -227,6 +245,12 @@ def process_json_object(obj):
           res.append(load_json_file(f'./imports/{rule["$import"]}.json'))
         if '$hyper-sub-layers' in rule:
           res += process_hyper_sub_layers(rule['$hyper-sub-layers'])
+        if '$disable-keys-combinations' in rule:
+          for combination in rule['$disable-keys-combinations']:
+            res.append(process_disable_keys_combination(
+              combination['key_code'],
+              combination['modifiers']
+            ))
       return {'rules': res}
     else:
       return {k: process_json_object(v) for k, v in obj.items()}
