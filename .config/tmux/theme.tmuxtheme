@@ -36,8 +36,8 @@ set-option -g @prefix_highlight_bg $color_green
 set-option -g @prefix_highlight_copy_mode_attr fg=$color_black,bg=$color_green
 set-option -g @prefix_highlight_output_prefix "  "
 
-set-option -g status-right "#[fg=$color_green,bg=$color_black,nobold,nounderscore,noitalics]#[fg=$color_black,bg=$color_green,bold] #h #[fg=$color_yellow,bg=$color_green]#[fg=$color_black,bg=$color_yellow]"
-set-option -g status-left "#[fg=$color_black,bg=$color_green,bold]#[fg=$color_black,bg=$color_green,bold] #S #{prefix_highlight}#[fg=$color_green,bg=$color_black,nobold,nounderscore,noitalics]"
+set-option -g status-right "#[fg=$color_green,bg=$color_black,nobold,nounderscore,noitalics]#[fg=$color_black,bg=$color_green,bold] #h #[fg=$color_yellow,bg=$color_green]#[fg=$color_black,bg=$color_yellow]"
+set-option -g status-left "#[fg=$color_black,bg=$color_green,bold]#[fg=$color_black,bg=$color_green,bold] #S #{prefix_highlight}#[fg=$color_green,bg=$color_black,nobold,nounderscore,noitalics]"
 
 set-option -g window-status-format "#[fg=$color_black,bg=$color_black,nobold,nounderscore,noitalics]#[fg=$color_white,bg=$color_black] #I  #W #[fg=$color_black,bg=$color_black,nobold,nounderscore,noitalics]"
 set-option -g window-status-current-format "#[fg=$color_black,bg=$color_grey,nobold,nounderscore,noitalics]#[fg=$color_white,bg=$color_grey,nobold] #I  #W #[fg=$color_grey,bg=$color_black,nobold,nounderscore,noitalics]"
