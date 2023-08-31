@@ -18,6 +18,7 @@ setw -g window-status-separator ""
 set-option -g status-style none
 set-option -g status-left-style none
 set-option -g status-style bg=$color_black,fg=$color_white
+set-option -g status-position top
 
 set-option -g window-style fg=$color_grey
 set-option -g window-active-style fg=$color_white
