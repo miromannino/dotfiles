@@ -168,25 +168,31 @@ def process_set_meh_key(obj):
   }
 
 
-def process_key(key_code):
-  if key_code.startswith('$meh_'):
-    return {
-        'to': [{
-            'key_code': key_code.replace('$meh_', ''),
-            'modifiers': MEH_KEY
-        }],
-        'type': 'basic'
-    }
-  if key_code.startswith('$hyper_'):
-    return {
-        'to': [{
-            'key_code': key_code.replace('$hyper_', ''),
-            'modifiers': HYPER_KEY
-        }],
-        'type': 'basic'
-    }
+def process_key(key):
+  modifiers = []
+  while True:
+    if key.startswith('$meh_'):
+      key = key[len('$meh_'):]
+      modifiers = MEH_KEY
+    if key.startswith('$hyper_'):
+      key = key[len('$hyper_'):]
+      modifiers = HYPER_KEY
+    if key.startswith('$ctrl_'):
+      key = key[len('$ctrl_'):]
+      modifiers.append('left_control')
+    if key.startswith('$alt_'):
+      key = key[len('$alt_'):]
+      modifiers.append('left_option')
+    if key.startswith('$cmd_'):
+      key = key[len('$cmd_'):]
+      modifiers.append('left_command')
+    break
+
   return {
-      'to': [{'key_code': key_code}],
+      'to': [{
+        'key_code': key,
+        'modifiers': modifiers
+      }],
       'type': 'basic'
   }
 
