@@ -18,11 +18,11 @@
                 },
                 "rules": [
                     {
-                        "description": "Change right_alt to hyper key",
+                        "description": "Change right_command to hyper key",
                         "manipulators": [
                             {
                                 "from": {
-                                    "key_code": "right_alt",
+                                    "key_code": "right_command",
                                     "modifiers": {
                                         "optional": [
                                             "any"
@@ -194,248 +194,22 @@
                         ]
                     },
                     {
-                        "description": "Disable right_shift + open_bracket",
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "open_bracket",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "right_shift"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "vk_none"
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "Disable right_shift + close_bracket",
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "close_bracket",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "right_shift"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "vk_none"
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "Disable right_shift + 9",
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "9",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "right_shift"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "vk_none"
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "Disable right_shift + 0",
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "0",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "right_shift"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "vk_none"
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "Disable right_shift + equal_sign",
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "equal_sign",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "right_shift"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "vk_none"
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "Disable right_shift + 8",
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "8",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "right_shift"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "vk_none"
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "Disable right_shift + 6",
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "6",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "right_shift"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "vk_none"
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "Disable right_shift + 5",
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "5",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "right_shift"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "vk_none"
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "Disable right_shift + backslash",
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "backslash",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "right_shift"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "vk_none"
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "Disable right_shift + quote",
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "quote",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "right_shift"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "vk_none"
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "Disable right_shift + slash",
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "slash",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "right_shift"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "vk_none"
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
                         "description": "Sublayer o",
                         "manipulators": [
                             {
                                 "conditions": [
                                     {
-                                        "name": "hyper_sublayer_m",
+                                        "name": "hyper_sublayer_description",
                                         "type": "variable_if",
                                         "value": 0
                                     },
                                     {
-                                        "name": "hyper_sublayer_u",
+                                        "name": "hyper_sublayer_e",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_v",
                                         "type": "variable_if",
                                         "value": 0
                                     },
@@ -445,7 +219,12 @@
                                         "value": 0
                                     },
                                     {
-                                        "name": "hyper_sublayer_w",
+                                        "name": "hyper_sublayer_t",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_f",
                                         "type": "variable_if",
                                         "value": 0
                                     }
@@ -608,7 +387,7 @@
                             {
                                 "conditions": [
                                     {
-                                        "name": "hyper_sublayer_o",
+                                        "name": "hyper_sublayer_description",
                                         "type": "variable_if",
                                         "value": 0
                                     },
@@ -618,12 +397,22 @@
                                         "value": 0
                                     },
                                     {
-                                        "name": "hyper_sublayer_s",
+                                        "name": "hyper_sublayer_d",
                                         "type": "variable_if",
                                         "value": 0
                                     },
                                     {
-                                        "name": "hyper_sublayer_w",
+                                        "name": "hyper_sublayer_p",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_n",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_b",
                                         "type": "variable_if",
                                         "value": 0
                                     }
@@ -781,22 +570,17 @@
                             {
                                 "conditions": [
                                     {
-                                        "name": "hyper_sublayer_o",
+                                        "name": "hyper_sublayer_description",
                                         "type": "variable_if",
                                         "value": 0
                                     },
                                     {
-                                        "name": "hyper_sublayer_m",
+                                        "name": "hyper_sublayer_g",
                                         "type": "variable_if",
                                         "value": 0
                                     },
                                     {
-                                        "name": "hyper_sublayer_s",
-                                        "type": "variable_if",
-                                        "value": 0
-                                    },
-                                    {
-                                        "name": "hyper_sublayer_w",
+                                        "name": "hyper_sublayer_c",
                                         "type": "variable_if",
                                         "value": 0
                                     }
@@ -887,12 +671,7 @@
                             {
                                 "conditions": [
                                     {
-                                        "name": "hyper_sublayer_o",
-                                        "type": "variable_if",
-                                        "value": 0
-                                    },
-                                    {
-                                        "name": "hyper_sublayer_m",
+                                        "name": "hyper_sublayer_description",
                                         "type": "variable_if",
                                         "value": 0
                                     },
@@ -902,7 +681,12 @@
                                         "value": 0
                                     },
                                     {
-                                        "name": "hyper_sublayer_w",
+                                        "name": "hyper_sublayer_d",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_l",
                                         "type": "variable_if",
                                         "value": 0
                                     }
@@ -1014,22 +798,27 @@
                             {
                                 "conditions": [
                                     {
-                                        "name": "hyper_sublayer_o",
+                                        "name": "hyper_sublayer_description",
                                         "type": "variable_if",
                                         "value": 0
                                     },
                                     {
-                                        "name": "hyper_sublayer_m",
+                                        "name": "hyper_sublayer_h",
                                         "type": "variable_if",
                                         "value": 0
                                     },
                                     {
-                                        "name": "hyper_sublayer_u",
+                                        "name": "hyper_sublayer_j",
                                         "type": "variable_if",
                                         "value": 0
                                     },
                                     {
-                                        "name": "hyper_sublayer_s",
+                                        "name": "hyper_sublayer_k",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_l",
                                         "type": "variable_if",
                                         "value": 0
                                     }
@@ -1214,9 +1003,9 @@
                     "fn_function_keys": [],
                     "identifiers": {
                         "is_keyboard": true,
-                        "is_pointing_device": false,
-                        "product_id": 1957,
-                        "vendor_id": 1118
+                        "is_pointing_device": true,
+                        "product_id": 624,
+                        "vendor_id": 13364
                     },
                     "ignore": false,
                     "manipulate_caps_lock_led": true,
@@ -1227,13 +1016,13 @@
                     "disable_built_in_keyboard_if_exists": false,
                     "fn_function_keys": [],
                     "identifiers": {
-                        "is_keyboard": false,
-                        "is_pointing_device": true,
-                        "product_id": 1957,
-                        "vendor_id": 1118
+                        "is_keyboard": true,
+                        "is_pointing_device": false,
+                        "product_id": 624,
+                        "vendor_id": 13364
                     },
-                    "ignore": true,
-                    "manipulate_caps_lock_led": false,
+                    "ignore": false,
+                    "manipulate_caps_lock_led": true,
                     "simple_modifications": [],
                     "treat_as_built_in_keyboard": false
                 },
@@ -1256,12 +1045,26 @@
                     "fn_function_keys": [],
                     "identifiers": {
                         "is_keyboard": true,
-                        "is_pointing_device": true,
-                        "product_id": 624,
-                        "vendor_id": 13364
+                        "is_pointing_device": false,
+                        "product_id": 50475,
+                        "vendor_id": 1133
                     },
                     "ignore": false,
                     "manipulate_caps_lock_led": true,
+                    "simple_modifications": [],
+                    "treat_as_built_in_keyboard": false
+                },
+                {
+                    "disable_built_in_keyboard_if_exists": false,
+                    "fn_function_keys": [],
+                    "identifiers": {
+                        "is_keyboard": false,
+                        "is_pointing_device": true,
+                        "product_id": 50475,
+                        "vendor_id": 1133
+                    },
+                    "ignore": true,
+                    "manipulate_caps_lock_led": false,
                     "simple_modifications": [],
                     "treat_as_built_in_keyboard": false
                 }
