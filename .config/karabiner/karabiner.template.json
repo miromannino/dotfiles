@@ -66,11 +66,12 @@
               "s": {
                 "description": "System shortcuts",
                 "u": { "$key": "display_brightness_increment" },
-                "d": { "$key": "display_brightness_decrement" },
-                "l": { "$key": "lock_screen" }
+                "d": { "$key": "display_brightness_decrement" }
               },
               "d": {
                 "description": "Desktop shortcuts",
+                "k": { "$key": "$ctrl_$alt_up_arrow" },
+                "j": { "$key": "$ctrl_$alt_down_arrow" },
                 "h": { "$key": "$ctrl_$alt_left_arrow" },
                 "l": { "$key": "$ctrl_$alt_right_arrow" }
               },
