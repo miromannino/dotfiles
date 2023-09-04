@@ -28,6 +28,7 @@
               "modifiers": [ "left_control", "left_option", "left_command" ] 
             }
           },
+          { "$import": "grave-accent-hyper" },
           { "$import": "vim-arrows" },
           { "$import": "tab-ctrl" },
           { "$disable-keys-combinations": [
@@ -45,10 +46,12 @@
               "a": {
                 "description": "Open applications",
                 "e": { "$app": "Microsoft Edge" },
+                "c": { "$app": "Google Chrome" },
                 "v": { "$app": "Visual Studio Code" },
                 "s": { "$app": "Slack" },
                 "t": { "$app": "iTerm" },
-                "f": { "$app": "Finder" }
+                "f": { "$app": "Finder" },
+                "o": { "$app": "Obsidian" }
               },
               "m": {
                 "description": "Media shortcuts",
