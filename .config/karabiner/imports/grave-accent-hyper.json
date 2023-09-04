@@ -1,0 +1,47 @@
+{
+  "description": "grave accent to hyper if pressed with other keys",
+  "manipulators": [
+    {
+      "from": {
+        "key_code": "non_us_backslash"
+      },
+      "to": [
+        {
+          "key_code": "left_control",
+          "modifiers": [
+            "left_shift",
+            "left_command",
+            "left_option"
+          ]
+        }
+      ],
+      "to_if_alone": [
+        {
+          "key_code": "grave_accent_and_tilde"
+        }
+      ],
+      "type": "basic"
+    },
+    {
+      "from": {
+        "key_code": "grave_accent_and_tilde"
+      },
+      "to": [
+        {
+          "key_code": "left_control",
+          "modifiers": [
+            "left_shift",
+            "left_command",
+            "left_option"
+          ]
+        }
+      ],
+      "to_if_alone": [
+        {
+          "key_code": "grave_accent_and_tilde"
+        }
+      ],
+      "type": "basic"
+    }
+  ]
+}
