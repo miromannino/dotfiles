@@ -55,12 +55,8 @@ set shiftwidth=2 "what happens when >>, << and auto indentation
 set smarttab
 
 "Don't remove the selection after indentation
-xnoremap > >gv
-xnoremap < <gv
-
-"Use TAB and SHIFT-TAB to indent quicker than > and <
-xnoremap <tab> >gv
-xnoremap <S-Tab> <gv
+vnoremap > >gv
+vnoremap < <gv
 
 set autoindent 
 
