@@ -146,6 +146,9 @@ set smartcase
 " Applies substitutions globally on lines, not just the first occurrence
 set gdefault
 
-" Clear highlighted found words
-nnoremap <silent> <leader>/ :nohlsearch<CR>
+" Clear highlighted found words by pressing ENTER
+" So to search press / followed by the characters to search
+" Pressing ENTER will start the search highliting all the results
+" Pressing ENTER again will remove the highlitings
+nnoremap <silent> <CR> :noh<CR>
 
