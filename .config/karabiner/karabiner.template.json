@@ -51,6 +51,11 @@
                 "f": { "$app": "Finder" },
                 "o": { "$app": "Obsidian" }
               },
+              "t": {
+                "description": "Timer manager (currently Toggl)",
+                "s": { "$key": "$meh_9"  },
+                "a": { "$key": "$meh_8"  }
+              },
               "m": {
                 "description": "Media shortcuts",
                 "u": { "$key": "volume_increment" },
