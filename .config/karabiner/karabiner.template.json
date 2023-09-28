@@ -49,6 +49,7 @@
                 "s": { "$app": "Slack" },
                 "t": { "$app": "iTerm" },
                 "f": { "$app": "Finder" },
+                "l": { "$app": "Toggl Track" },
                 "o": { "$app": "Obsidian" }
               },
               "t": {
