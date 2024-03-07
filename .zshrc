@@ -121,6 +121,7 @@ path=(
   $HOME/.yarn/bin
   $HOME/.config/yarn/global/node_modules/.bin
   /opt/homebrew/opt/node@16/bin
+  /opt/X11/bin
   $path
 )
 
