@@ -46,7 +46,7 @@
                 "b": { "$app": "Microsoft Edge" },
                 "c": { "$app": "Google Chrome" },
                 "v": { "$app": "Visual Studio Code" },
-                "s": { "$app": "Slack" },
+                "m": { "$app": "Slack" },
                 "t": { "$app": "iTerm" },
                 "f": { "$app": "Finder" },
                 "l": { "$app": "Toggl Track" },

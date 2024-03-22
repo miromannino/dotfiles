@@ -483,7 +483,7 @@
                 "description": "Open -a 'Slack.app'",
                 "type": "basic",
                 "from": {
-                  "key_code": "s",
+                  "key_code": "m",
                   "modifiers": {
                     "mandatory": [
                       "any"
