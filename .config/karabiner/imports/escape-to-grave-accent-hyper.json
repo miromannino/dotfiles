@@ -3,7 +3,7 @@
   "manipulators": [
     {
       "from": {
-        "key_code": "non_us_backslash"
+        "key_code": "escape"
       },
       "to": [
         {
