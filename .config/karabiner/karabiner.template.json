@@ -28,7 +28,7 @@
               "modifiers": [ "left_control", "left_option", "left_command" ] 
             }
           },
-          { "$import": "grave-accent-hyper" },
+          { "$import": "escape-to-grave-accent-hyper" },
           { "$import": "vim-arrows" },
           { "$import": "tab-ctrl" },
           { "$disable-keys-combinations": [
