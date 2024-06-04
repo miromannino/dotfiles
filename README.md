@@ -54,16 +54,6 @@ Take changes into account
   source ~/.zshrc
 ```
 
-### AltTab 
-
-https://github.com/lwouis/alt-tab-macos
-  
-Install
- 
-```
-brew install --cask alt-tab
-```
-
 ### Hammerspoon 
 
 https://github.com/Hammerspoon/hammerspoon)
