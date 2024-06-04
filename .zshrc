@@ -143,6 +143,3 @@ alias pip=pip3
 if [[ -s "${ZDOTDIR:-$HOME}/.zshrc_local" ]]; then
   source "${ZDOTDIR:-$HOME}/.zshrc_local"
 fi
-
-clear
-printf '\n%.0s' {1..$LINES}
