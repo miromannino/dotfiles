@@ -82,15 +82,15 @@ plugins=(
   macos
 )
 
+fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
+
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
-# if [[ -z "$LANG" ]]; then
 export LANG='en_US.UTF-8'
-# fi
 
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
@@ -116,6 +116,12 @@ fi
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles.git/ --work-tree=$HOME"
+togif() {
+ ffmpeg -i $1.mov -f gif - | gifsicle --optimize=3 --delay=3 > $1.gif
+}
+alias python=python3.11
+alias pip=pip3
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
@@ -131,13 +137,6 @@ path=(
   /opt/X11/bin
   $path
 )
-
-# Miro's Dotfiles
-alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles.git/ --work-tree=$HOME"
-
-# Python
-alias python=python3.11
-alias pip=pip3
 
 # Run a local version of zshrc that is not in sync with dotfiles
 if [[ -s "${ZDOTDIR:-$HOME}/.zshrc_local" ]]; then
