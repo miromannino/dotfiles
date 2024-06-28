@@ -6,7 +6,7 @@
   "editor.autoClosingOvertype": "never",
   "editor.autoClosingBrackets": "never",
   "workbench.startupEditor": "newUntitledFile",
-  "diffEditor.ignoreTrimWhitespace": false,
+  "diffEditor.ignoreTrimWhitespace": true,
   "python.defaultInterpreterPath": "/usr/bin/python3",
   "python.envFile": "${workspaceFolder}/.env",
   "security.workspace.trust.untrustedFiles": "open",
@@ -45,6 +45,15 @@
       ],
       "commands": [
         "editor.action.quickFix"
+      ]
+    },
+    {
+      "before": [
+        "g",
+        "p"
+      ],
+      "commands": [
+        "editor.action.triggerParameterHints"
       ]
     },
     {
@@ -139,7 +148,39 @@
       "commands": [
         "redo"
       ]
-    }
+    },
+    {
+      "before": [
+        "<C-m>"
+      ],
+      "commands": [
+        "workbench.action.toggleMaximizeEditorGroup"
+      ]
+    },
+    {
+      "before": [
+        "<C-w>",
+        "="
+      ],
+      "after": [],
+      "commands": [
+        "workbench.action.increaseViewSize",
+        "workbench.action.increaseViewSize",
+        "workbench.action.increaseViewSize"
+      ]
+    },
+    {
+      "before": [
+        "<C-w>",
+        "-"
+      ],
+      "after": [],
+      "commands": [
+        "workbench.action.decreaseViewSize",
+        "workbench.action.decreaseViewSize",
+        "workbench.action.decreaseViewSize"
+      ]
+    },
   ],
   "vim.visualModeKeyBindingsNonRecursive": [
     {
@@ -255,7 +296,6 @@
     "--max-line-length=100",
     "--aggressive"
   ],
-  "workbench.activityBar.location": "hidden",
   "window.zoomLevel": 1,
   "[typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -285,6 +325,12 @@
     "sound": "off"
   },
   "terminal.integrated.enableVisualBell": false,
-  "workbench.colorTheme": "One Dark Pro",
-  "editor.renderWhitespace": "none"
+  "editor.renderWhitespace": "none",
+  "extensions.ignoreRecommendations": true,
+  "workbench.colorTheme": "Gruvbox Dark Medium",
+  "window.commandCenter": false,
+  "window.titleBarStyle": "custom",
+  "window.density.editorTabHeight": "compact",
+  "workbench.layoutControl.enabled": false,
+  "workbench.activityBar.location": "hidden"
 }
