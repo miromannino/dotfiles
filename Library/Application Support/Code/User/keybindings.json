@@ -264,6 +264,14 @@
     "command": "workbench.action.moveEditorToLeftGroup"
   },
   {
+    "key": "ctrl+shift+j",
+    "command": "workbench.action.moveEditorToBelowGroup"
+  },
+  {
+    "key": "ctrl+shift+k",
+    "command": "workbench.action.moveEditorToAboveGroup"
+  },
+  {
     "key": "ctrl+-",
     "command": "-workbench.action.navigateBack",
     "when": "canNavigateBack"
@@ -527,5 +535,5 @@
     "key": "shift+cmd+e",
     "command": "-workbench.view.explorer",
     "when": "viewContainer.workbench.view.explorer.enabled"
-  }
+  },
 ]

@@ -1,6 +1,7 @@
 {
   "git.terminalAuthentication": false,
   "git.autofetch": true,
+  "git.autorefresh": true,
   "editor.autoClosingQuotes": "never",
   "editor.autoSurround": "never",
   "editor.autoClosingOvertype": "never",
@@ -63,6 +64,15 @@
       ],
       "commands": [
         "editor.action.formatDocument"
+      ]
+    },
+    {
+      "before": [
+        "-",
+        "-"
+      ],
+      "commands": [
+        "editor.action.organizeImports"
       ]
     },
     {
@@ -327,10 +337,10 @@
   "terminal.integrated.enableVisualBell": false,
   "editor.renderWhitespace": "none",
   "extensions.ignoreRecommendations": true,
-  "workbench.colorTheme": "Gruvbox Dark Medium",
   "window.commandCenter": false,
   "window.titleBarStyle": "custom",
   "window.density.editorTabHeight": "compact",
   "workbench.layoutControl.enabled": false,
+  "workbench.colorTheme": "Gruvbox Dark Soft",
   "workbench.activityBar.location": "hidden"
 }
