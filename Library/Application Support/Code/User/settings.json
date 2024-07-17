@@ -1,7 +1,6 @@
 {
   "git.terminalAuthentication": false,
   "git.autofetch": true,
-  "git.autorefresh": true,
   "editor.autoClosingQuotes": "never",
   "editor.autoSurround": "never",
   "editor.autoClosingOvertype": "never",
@@ -10,18 +9,53 @@
   "diffEditor.ignoreTrimWhitespace": true,
   "python.defaultInterpreterPath": "/usr/bin/python3",
   "python.envFile": "${workspaceFolder}/.env",
+  "terminal.integrated.enableVisualBell": false,
+  "editor.renderWhitespace": "none",
+  "editor.formatOnSave": true,
+  "extensions.ignoreRecommendations": true,
+  "workbench.colorTheme": "Gruvbox Dark Medium",
+  "window.commandCenter": false,
+  "window.titleBarStyle": "custom",
+  "window.density.editorTabHeight": "compact",
+  "workbench.layoutControl.enabled": false,
+  "workbench.activityBar.location": "hidden",
   "security.workspace.trust.untrustedFiles": "open",
-  "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
   "editor.tabSize": 2,
-  "[scss]": {
-    "editor.defaultFormatter": "vscode.css-language-features"
-  },
-  // "debug.toolBarLocation": "hidden",
+  "debug.toolBarLocation": "hidden",
   "editor.rulers": [
-    100
+    80
   ],
+  "editor.acceptSuggestionOnCommitCharacter": false,
+  "window.confirmBeforeClose": "always",
+  "files.autoSave": "afterDelay",
+  "autopep8.args": [
+    "--indent-size=2",
+    "--ignore=E121",
+    "--max-line-length=100",
+    "--aggressive"
+  ],
+  "window.zoomLevel": 1,
+  "accessibility.signals.lineHasError": {
+    "sound": "off"
+  },
+  "accessibility.signals.lineHasFoldedArea": {
+    "sound": "off"
+  },
+  "accessibility.signals.lineHasBreakpoint": {
+    "sound": "off"
+  },
+  "accessibility.signals.lineHasInlineSuggestion": {
+    "sound": "off"
+  },
+  "accessibility.signals.onDebugBreak": {
+    "sound": "off"
+  },
+  "accessibility.signals.noInlayHints": {
+    "sound": "off"
+  },
+  "accessibility.signals.terminalBell": {
+    "sound": "off"
+  },
   "vim.easymotion": true,
   "vim.useSystemClipboard": false,
   "vim.useCtrlKeys": true,
@@ -261,14 +295,20 @@
   ],
   "terminal.integrated.fontFamily": "MesloLGS NF",
   "editor.minimap.enabled": false,
-  "[javascriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[jsonc]": {
-    "editor.defaultFormatter": "vscode.json-language-features"
-  },
   "editor.wordWrapColumn": 100,
   "git.confirmSync": false,
+  "notebook.lineNumbers": "on",
+  "editor.cursorSurroundingLines": 10,
+  "editor.inlineSuggest.enabled": true,
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[scss]": {
+    "editor.defaultFormatter": "vscode.css-language-features"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
   "[python]": {
     "editor.defaultFormatter": "ms-python.autopep8",
     "editor.insertSpaces": true,
@@ -276,71 +316,34 @@
     "editor.detectIndentation": false,
     "editor.formatOnType": true
   },
-  "notebook.lineNumbers": "on",
-  "[json]": {
-    "editor.defaultFormatter": "vscode.json-language-features"
-  },
   "[astro]": {
     "editor.defaultFormatter": "astro-build.astro-vscode"
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
   },
   "prettier.documentSelectors": [
     "**/*.astro"
   ],
-  "[markdown]": {
-    "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
-  },
-  "editor.cursorSurroundingLines": 10,
-  "editor.inlineSuggest.enabled": true,
   "[html]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "editor.acceptSuggestionOnCommitCharacter": false,
-  "window.confirmBeforeClose": "always",
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": "explicit"
+    }
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": "explicit"
+    }
+  },
   "[css]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "files.autoSave": "afterDelay",
-  "autopep8.args": [
-    "--indent-size=2",
-    "--ignore=E121",
-    "--max-line-length=100",
-    "--aggressive"
-  ],
-  "window.zoomLevel": 1,
-  "[typescriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "accessibility.signals.lineHasError": {
-    "sound": "off"
-  },
-  "accessibility.signals.lineHasFoldedArea": {
-    "sound": "off"
-  },
-  "accessibility.signals.lineHasBreakpoint": {
-    "sound": "off"
-  },
-  "accessibility.signals.lineHasInlineSuggestion": {
-    "sound": "off"
-  },
-  "accessibility.signals.onDebugBreak": {
-    "sound": "off"
-  },
-  "accessibility.signals.noInlayHints": {
-    "sound": "off"
-  },
-  "accessibility.signals.terminalBell": {
-    "sound": "off"
-  },
-  "terminal.integrated.enableVisualBell": false,
-  "editor.renderWhitespace": "none",
-  "extensions.ignoreRecommendations": true,
-  "window.commandCenter": false,
-  "window.titleBarStyle": "custom",
-  "window.density.editorTabHeight": "compact",
-  "workbench.layoutControl.enabled": false,
-  "workbench.colorTheme": "Gruvbox Dark Soft",
-  "workbench.activityBar.location": "hidden"
 }
