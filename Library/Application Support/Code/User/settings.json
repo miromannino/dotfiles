@@ -5,6 +5,7 @@
   "editor.autoSurround": "never",
   "editor.autoClosingOvertype": "never",
   "editor.autoClosingBrackets": "never",
+  "workbench.editor.revealIfOpen": true,
   "workbench.startupEditor": "newUntitledFile",
   "diffEditor.ignoreTrimWhitespace": true,
   "python.defaultInterpreterPath": "/usr/bin/python3",
@@ -13,7 +14,7 @@
   "editor.renderWhitespace": "none",
   "editor.formatOnSave": true,
   "extensions.ignoreRecommendations": true,
-  "workbench.colorTheme": "Gruvbox Dark Medium",
+  "workbench.colorTheme": "Gruvbox Dark Soft",
   "window.commandCenter": false,
   "window.titleBarStyle": "custom",
   "window.density.editorTabHeight": "compact",
@@ -346,4 +347,11 @@
   "[css]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": false,
+    "markdown": false,
+    "scminput": false
+  },
+  "github.copilot.editor.enableAutoCompletions": false
 }
