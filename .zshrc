@@ -139,4 +139,6 @@ path=(
 )
 
 # Run a local version of zshrc that is not in sync with dotfiles
-source "${ZDOTDIR:-$HOME}/.zshrc_local"
+if [[ -s "${ZDOTDIR:-$HOME}/.zshrc_local" ]]; then
+  source "${ZDOTDIR:-$HOME}/.zshrc_local"
+fi

@@ -5,16 +5,16 @@
   "editor.autoSurround": "never",
   "editor.autoClosingOvertype": "never",
   "editor.autoClosingBrackets": "never",
-  "workbench.editor.revealIfOpen": true,
   "workbench.startupEditor": "newUntitledFile",
   "diffEditor.ignoreTrimWhitespace": true,
   "python.defaultInterpreterPath": "/usr/bin/python3",
   "python.envFile": "${workspaceFolder}/.env",
   "terminal.integrated.enableVisualBell": false,
+  "workbench.editor.revealIfOpen": true,
   "editor.renderWhitespace": "none",
   "editor.formatOnSave": true,
   "extensions.ignoreRecommendations": true,
-  "workbench.colorTheme": "Gruvbox Dark Soft",
+  "workbench.colorTheme": "Nord",
   "window.commandCenter": false,
   "window.titleBarStyle": "custom",
   "window.density.editorTabHeight": "compact",
@@ -295,7 +295,6 @@
     }
   ],
   "terminal.integrated.fontFamily": "MesloLGS NF",
-  "editor.minimap.enabled": false,
   "editor.wordWrapColumn": 100,
   "git.confirmSync": false,
   "notebook.lineNumbers": "on",
@@ -353,5 +352,11 @@
     "markdown": false,
     "scminput": false
   },
-  "github.copilot.editor.enableAutoCompletions": false
+  "github.copilot.editor.enableAutoCompletions": false,
+  "search.exclude": {
+    ".git/**": true,
+    ".nx/**": true,
+    "**/dist/**": true
+  },
+  "editor.minimap.enabled": false,
 }
