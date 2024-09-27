@@ -122,6 +122,8 @@ togif() {
 }
 alias python=python3.11
 alias pip=pip3
+alias vim=nvim
+alias vi=nvim
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
