@@ -1,6 +1,7 @@
 {
+  "git.enabled": true,
   "git.terminalAuthentication": false,
-  "git.autofetch": true,
+  "git.autofetch": false,
   "editor.autoClosingQuotes": "never",
   "editor.autoSurround": "never",
   "editor.autoClosingOvertype": "never",
@@ -226,6 +227,24 @@
         "workbench.action.decreaseViewSize"
       ]
     },
+    {
+      "before": [
+        "<leader>",
+        "p"
+      ],
+      "commands": [
+        "workbench.action.pinEditor"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "P"
+      ],
+      "commands": [
+        "workbench.action.unpinEditor"
+      ]
+    },
   ],
   "vim.visualModeKeyBindingsNonRecursive": [
     {
@@ -292,7 +311,25 @@
         "2",
         "s"
       ]
-    }
+    },
+    {
+      "before": [
+        "<leader>",
+        "p"
+      ],
+      "commands": [
+        "workbench.action.pinEditor"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "P"
+      ],
+      "commands": [
+        "workbench.action.unpinEditor"
+      ]
+    },
   ],
   "terminal.integrated.fontFamily": "MesloLGS NF",
   "editor.wordWrapColumn": 100,
@@ -359,4 +396,5 @@
     "**/dist/**": true
   },
   "editor.minimap.enabled": false,
+  "typescript.updateImportsOnFileMove.enabled": "always",
 }
