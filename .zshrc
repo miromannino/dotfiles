@@ -120,7 +120,7 @@ alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles.git/ --work-tree=$HOME"
 togif() {
  ffmpeg -i $1.mov -f gif - | gifsicle --optimize=3 --delay=3 > $1.gif
 }
-alias python=python3.11
+alias python=python3
 alias pip=pip3
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
@@ -140,3 +140,6 @@ path=(
 
 # Run a local version of zshrc that is not in sync with dotfiles
 source "${ZDOTDIR:-$HOME}/.zshrc_local"
+
+# Created by `pipx` on 2024-11-23 09:31:35
+export PATH="$PATH:/Users/miro/.local/bin"

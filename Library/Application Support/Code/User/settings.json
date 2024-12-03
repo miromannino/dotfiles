@@ -14,7 +14,7 @@
   "editor.renderWhitespace": "none",
   "editor.formatOnSave": true,
   "extensions.ignoreRecommendations": true,
-  "workbench.colorTheme": "Gruvbox Dark Soft",
+  "workbench.colorTheme": "Nord",
   "window.commandCenter": false,
   "window.titleBarStyle": "custom",
   "window.density.editorTabHeight": "compact",
@@ -315,7 +315,10 @@
     "editor.insertSpaces": true,
     "editor.tabSize": 2,
     "editor.detectIndentation": false,
-    "editor.formatOnType": true
+    "editor.formatOnType": true,
+    "editor.rulers": [
+      100
+    ]
   },
   "[astro]": {
     "editor.defaultFormatter": "astro-build.astro-vscode"
@@ -348,7 +351,7 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "github.copilot.enable": {
-    "*": true,
+    "*": false,
     "plaintext": false,
     "markdown": false,
     "scminput": false
