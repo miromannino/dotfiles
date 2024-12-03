@@ -122,6 +122,8 @@ togif() {
 }
 alias python=python3
 alias pip=pip3
+alias vim=nvim
+alias vi=nvim
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
@@ -139,7 +141,6 @@ path=(
 )
 
 # Run a local version of zshrc that is not in sync with dotfiles
-source "${ZDOTDIR:-$HOME}/.zshrc_local"
-
-# Created by `pipx` on 2024-11-23 09:31:35
-export PATH="$PATH:/Users/miro/.local/bin"
+if [[ -s "${ZDOTDIR:-$HOME}/.zshrc_local" ]]; then
+  source "${ZDOTDIR:-$HOME}/.zshrc_local"
+fi
