@@ -117,8 +117,11 @@ fi
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles.git/ --work-tree=$HOME"
-togif() {
+mov-to-gif() {
  ffmpeg -i $1.mov -f gif - | gifsicle --optimize=3 --delay=3 > $1.gif
+}
+mov-to-small-mp4() {
+ ffmpeg -i $1.mov -vcodec libx264 -crf 28 $1.mp4
 }
 alias python=python3
 alias pip=pip3
