@@ -123,8 +123,6 @@ mov-to-gif() {
 mov-to-small-mp4() {
  ffmpeg -i $1.mov -vcodec libx264 -crf 28 $1.mp4
 }
-alias python=python3
-alias pip=pip3
 alias vim=nvim
 alias vi=nvim
 
