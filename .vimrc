@@ -20,6 +20,8 @@ set updatetime=300
 
 let mapleader = " " "map leader to space
 
+set easymotion
+
 
 "-----------------------------------------
 " COPY&PASTE

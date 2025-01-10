@@ -20,7 +20,6 @@
   "window.titleBarStyle": "custom",
   "window.density.editorTabHeight": "compact",
   "workbench.layoutControl.enabled": false,
-  "workbench.activityBar.location": "hidden",
   "security.workspace.trust.untrustedFiles": "open",
   "editor.tabSize": 2,
   "debug.toolBarLocation": "hidden",
@@ -29,7 +28,6 @@
   ],
   "editor.acceptSuggestionOnCommitCharacter": false,
   "window.confirmBeforeClose": "always",
-  "files.autoSave": "afterDelay",
   "autopep8.args": [
     "--indent-size=2",
     "--ignore=E121",
@@ -400,4 +398,12 @@
   },
   "editor.minimap.enabled": false,
   "typescript.updateImportsOnFileMove.enabled": "always",
+  "workbench.activityBar.location": "hidden",
+  "git.blame.editorDecoration.template": "",
+  "git.blame.statusBarItem.enabled": true,
+  "git.blame.statusBarItem.template": "${authorName} ${hashShort} (${authorDateAgo})",
+  "files.autoSave": "afterDelay",
+  "files.exclude": {
+    "**/__pycache__": true
+  },
 }

@@ -1,1 +1,2 @@
 source ~/.vimrc
+nmap s <Plug>(easymotion-s2)
