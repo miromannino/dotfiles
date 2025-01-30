@@ -8,8 +8,6 @@
   "editor.autoClosingBrackets": "never",
   "workbench.startupEditor": "newUntitledFile",
   "diffEditor.ignoreTrimWhitespace": true,
-  "python.defaultInterpreterPath": "/usr/bin/python3",
-  "python.envFile": "${workspaceFolder}/.env",
   "terminal.integrated.enableVisualBell": false,
   "workbench.editor.revealIfOpen": true,
   "editor.renderWhitespace": "none",
@@ -344,6 +342,11 @@
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  "python.defaultInterpreterPath": "/usr/bin/python3",
+  "python.envFile": "${workspaceFolder}/.env",
+  "python.analysis.languageServerMode": "full",
+  "python.analysis.typeCheckingMode": "standard",
+  "python.languageServer": "Pylance",
   "[python]": {
     "editor.defaultFormatter": "ms-python.autopep8",
     "editor.insertSpaces": true,
@@ -402,8 +405,8 @@
   "git.blame.editorDecoration.template": "",
   "git.blame.statusBarItem.enabled": true,
   "git.blame.statusBarItem.template": "${authorName} ${hashShort} (${authorDateAgo})",
-  "files.autoSave": "afterDelay",
   "files.exclude": {
     "**/__pycache__": true
   },
+  "files.autoSave": "afterDelay",
 }
