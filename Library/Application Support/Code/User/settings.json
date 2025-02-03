@@ -26,12 +26,6 @@
   ],
   "editor.acceptSuggestionOnCommitCharacter": false,
   "window.confirmBeforeClose": "always",
-  "autopep8.args": [
-    "--indent-size=2",
-    "--ignore=E121",
-    "--max-line-length=100",
-    "--aggressive"
-  ],
   "window.zoomLevel": 1,
   "accessibility.signals.lineHasError": {
     "sound": "off"
@@ -348,15 +342,18 @@
   "python.analysis.typeCheckingMode": "standard",
   "python.languageServer": "Pylance",
   "[python]": {
-    "editor.defaultFormatter": "ms-python.autopep8",
+    "editor.defaultFormatter": "ms-python.black-formatter",
     "editor.insertSpaces": true,
-    "editor.tabSize": 2,
+    "editor.tabSize": 4,
     "editor.detectIndentation": false,
     "editor.formatOnType": true,
     "editor.rulers": [
       100
     ]
   },
+  "black-formatter.args": [
+    "--line-length=100",
+  ],
   "[astro]": {
     "editor.defaultFormatter": "astro-build.astro-vscode"
   },
